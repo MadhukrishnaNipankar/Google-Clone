@@ -15,10 +15,15 @@ import {
   Button,
   Divider,
   Flex,
+  Icon,
+  IconButton
 } from "@chakra-ui/react";
 import { SearchIcon } from "@chakra-ui/icons";
 import MicrophoneIconImage from "../assets/Images/GoogleMic.png";
 import GoogleIconImage from "../assets/Images/googleLogo.png";
+import { TbGridDots } from "react-icons/tb";
+import { FaUserCircle } from "react-icons/fa";
+
 
 function HomePage() {
   return (
@@ -30,6 +35,14 @@ function HomePage() {
         <Box _hover={{ cursor: "pointer", textDecoration: "underline" }}>
           Images
         </Box>
+
+        <IconButton  variant="ghost" isRound="true"   _hover={{ cursor: "pointer",backgroundColor:"gray.100" }}>
+          <Icon as={TbGridDots} w={5} h={5} color="gray.600" />
+        </IconButton>
+        
+        <IconButton variant="ghost" isRound="true"   _hover={{ cursor: "pointer" }}>
+          <Icon as={FaUserCircle} w={7} h={7}  color="gray.600" />
+        </IconButton>
       </HStack>
 
       <VStack style={{ marginTop: "225px" }}>
@@ -38,7 +51,7 @@ function HomePage() {
         </Box>
 
         <Box style={{ marginTop: "20px" }}>
-          <InputGroup>
+          <InputGroup  >
             <InputLeftElement
               ml="5px"
               pointerEvents="none"
